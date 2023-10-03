@@ -1,0 +1,558 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "sales@vitaltechmm.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['name'];
+    $last_name = $_POST['surname'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;	
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags --> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>VitalTech Myanmar</title>
+		<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+		<link rel="stylesheet" href="vendors/owl.carousel/css/owl.carousel.css">
+		<link rel="stylesheet" href="vendors/owl.carousel/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendors/aos/css/aos.css">
+		<link rel="stylesheet" href="vendors/jquery-flipster/css/jquery.flipster.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="images/vtmsmalllogo.png" />
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<div id="mobile-menu-overlay"></div>
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<div class="container">
+			<a class="navbar-collapse" href="#home"><img src="images/banner.svg" alt="logo"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<div class="d-lg-none d-flex justify-content-between px-4 py-3 align-items-center">
+						<img src="images/banner.svg" class="logo-mobile-menu" alt="logo">
+						<a href="javascript:;" class="close-menu"><i class="mdi mdi-close"></i></a>
+					</div>
+					<ul class="navbar-nav ml-auto align-items-center">
+						<li class="nav-item active">
+							<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Services</a>							
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#projects">Info</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="#plans">Hosting</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-success" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		
+
+			</section>
+		</div>
+		<div class="page-body-wrapper">
+			<section id="home" class="home">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="main-banner">
+								<div class="d-sm-flex justify-content-between">
+									<div data-aos="zoom-in-up">
+										<div class="banner-title">
+												<h4 class="font-weight-medium">Connect World with Vital Tech & Your Satisfaction is Our Goal.
+
+											</h4>
+										</div>
+										
+										<a href="pdf/VTMMFlyer.pdf" class="btn btn-secondary mt-3">Get Your Quote</a>
+									</div>
+									<div class="mt-5 mt-lg-0">
+										<img src="images/connected_world.svg" alt="marsmello" class="img-fluid" data-aos="zoom-in-up">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+				<section class="our-services" id="services">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<center><h1 class="text-dark mb-5 font-weight-medium">What We Do</h1></center>
+								<h6 class="text-dark font-weight-light ">We’re IT Solution Company and strongly support your business requirements.
+
+									We provide digital solution for business (POS, Website, Web App and Mobile App (iOS & android) services, Networking, Server Administration. 
+									
+									As extra service, We troubleshoot the software and hardware error.</h6>
+							</div>
+						</div>
+					</div>
+
+				</section>
+
+
+			<section class="our-services" id="services">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h5 class="text-dark">We’re offering</h5>
+							<h3 class="font-weight-medium text-dark mb-5">Creative Digital Agency</h3>
+						</div>
+					</div>
+					<div class="row" data-aos="fade-up">
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<img src="images/mobile-icon-01.png" alt="integrated-marketing" data-aos="zoom-in">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Mobile Development
+								</h6>
+								<p>We Design and Develop Mobile Apps.
+								</p><br>
+								<button class="btn btn-outline-light" onclick="window.location.href='mobile.html'">learn more</button>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box"   data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<img src="images/website-icon.png" alt="design-development" data-aos="zoom-in">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Web Design
+								</h6>
+								<p>We Design and Develop Website for your business or personal use.
+								</p><br>
+								<button class="btn btn-outline-light" onclick="window.location.href='web-dev.html'">learn more</button>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<img src="images/webbased-icon.png" alt="digital-strategy" data-aos="zoom-in">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Web-Based System
+								</h6>
+								<p>We Design and Develop Web-based system for your business.
+								</p><br>
+								<button class="btn btn-outline-light" onclick="window.location.href='#'">learn more</button>
+							</div>
+						</div>
+					</div>
+					<div class="row" data-aos="fade-up">
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box  pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<img src="images/service-icon-01.png" alt="digital-marketing" data-aos="zoom-in">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Web Application
+								</h6>
+								<p>We Design and Develop Web-App for your business.
+								</p><br>
+								<button class="btn btn-outline-light" onclick="window.location.href='#'">learn more</button>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<img src="images/service-icon-02.png" alt="growth-strategy" data-aos="zoom-in">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Network Solution
+								</h6>
+								<p>we can design, implement and support a custom networking solution that allows you to transfer your data assets safely and securely across multiple platforms and operating systems.
+
+								</p><br>
+								<button class="btn btn-outline-light" onclick="window.location.href='network.html'">learn more</button>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box pb-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<img src="images/service-icon-03.png" alt="saving-strategy" data-aos="zoom-in">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">IT Service
+								</h6>
+								<p>We Support Other IT Service to your business or organization.
+								</p><br>
+								<button class="btn btn-outline-light" onclick="window.location.href='#'">learn more</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="our-process" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6" data-aos="fade-up">
+							<h3 class="font-weight-medium text-dark">Discover New Idea With Us!</h3>
+							<h5 class="text-dark mb-3">To Growth Your Business Faster</h5>
+							<p class="font-weight-medium mb-4">VitalTechMyanmar is a software company and we strongly support your business requirements. You may contact us for more information. Thank you. <br> 
+								
+							</p>
+							<div class="d-flex justify-content-start mb-3">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">Modernized UI/UX Design & Customization </p>
+							</div>
+							<div class="d-flex justify-content-start mb-3">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">Service & Security</p>
+							</div>
+							<div class="d-flex justify-content-start">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">Technical Support and Maintainance</p>
+							</div>
+						</div>
+						<div class="col-sm-6 text-right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+							<img src="images/idea.png" alt="idea" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="our-projects" id="projects">
+				<div class="container">
+					<div class="row mb-5">
+						<div class="col-sm-12">
+							
+						</div>
+					</div>
+				</div>
+				<div class="mb-5" data-aos="fade-up">
+					
+				</div>
+				<div class="container">
+					<div class="row pt-5 mt-5 pb-5 mb-5">
+						<div class="col-sm-3">
+							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-down">
+								<img src="images/satisfied-client.svg" alt="satisfied-client" class="mr-3">
+								<div>
+									<h4 class="font-weight-bold text-dark mb-0"><span class="scVal">0</span>%</h4>
+									<h5 class="text-dark mb-0">Satisfied clients</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-up">
+								<img src="images/finished-project.svg" alt="satisfied-client" class="mr-3">
+								<div>
+									<h4 class="font-weight-bold text-dark mb-0"><span class="fpVal">0</span></h4>
+									<h5 class="text-dark mb-0">Finished Project</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-down">
+								<img src="images/team-members.svg" alt="Team Members" class="mr-3">
+								<div>
+									<h4 class="font-weight-bold text-dark mb-0"><span class="tMVal">0</span></h4>
+									<h5 class="text-dark mb-0">Team Members</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-up">
+								<img src="images/our-blog-posts.svg" alt="Our Blog Posts" class="mr-3">
+								<div>
+									<h4 class="font-weight-bold text-dark mb-0"><span class="bPVal">0</span></h4>
+									<h5 class="text-dark mb-0">On Going Project</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="testimonial" id="testimonial">
+				<div class="container">
+					<div class="row  mt-md-0 mt-lg-4">
+						<div class="col-sm-6 text-white" data-aos="fade-up">
+							<p class="font-weight-bold mb-3">Quotes</p>
+							<h3 class="font-weight-medium">Looking Forward To <br>New Technology Changes</h3>
+							<ul class="flipster-custom-nav">
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link" title="0"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link"  title="1"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link active" title="2"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link"  title="3"></a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6" data-aos="fade-up">
+							<div id="testimonial-flipster">
+								<ul>
+									<li>
+										<div class="testimonial-item">
+											<img src="images/testimonial/htetoowaiyan.jpg" alt="icon" class="testimonial-icons">
+											<p>Htet Oo Wai Yan
+											</p>
+											<h6 class="testimonial-author">Chief Operating Officer</h6>
+											<p class="testimonial-destination">Operation</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<img src="images/testimonial/kaungkaung.jpg" alt="icon" class="testimonial-icons">
+											<p>Kaung Myat Thu</p>
+											<h6 class="testimonial-author">Chief Marketing Officer</h6>
+											<p class="testimonial-destination">Marketing</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<img src="images/testimonial/sitwaiyan.jpg" alt="icon" class="testimonial-icons">
+											<p>Sitt Wai Yan</p>
+											<h6 class="testimonial-author">Chief Executive Officer</h6>
+											<p class="testimonial-destination"></p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<img src="images/testimonial/ponemyat.jpg" alt="icon" class="testimonial-icons">
+											<p>Pone Myat Thar</p>
+											<h6 class="testimonial-author">Chief Technology Officer</h6>
+											<p class="testimonial-destination">Technical</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="clients pt-5 mt-5"  data-aos="fade-up" data-aos-offset="-400">
+				<div class="container">
+					<div class="row">
+						
+					</div>
+				</div>
+			</section>
+			<section class="hosting-list" id="plans">
+				<div class="container">
+					<div class="row" data-aos="fade-up" data-aos-offset="-500">
+						<div class="col-sm-12">
+							<div class="d-sm-flex justify-content-between align-items-center mb-2">
+								<div>
+									<h3 class="font-weight-medium text-dark ">Web Hosting Plans</h3>
+									<h5 class="text-dark ">Vital Tech Myanmar မှ  အမြန်ဆန်ဆုံးနှင့် စိတ်ချရသော Hosting  Package များကို ကျွန်တော်တို့ရဲ့ Customer များအတွက် ဈေးနှုန်းချိုသာစွာဖြင့်ရောင်းချပေးနေပါပြီ။ </h5>
+								</div>
+							
+							</div>
+						</div>
+					</div>
+					<div class="row"  data-aos="fade-up" data-aos-offset="-300">
+						<div class="col-sm-4">
+							<div class="hosting-box">
+								<img src="images/starter.svg" alt="starter">
+								<h6 class="font-weight-medium title-text">Silver Plan</h6>
+								<h4 class="text-amount mb-4 mt-2">MMK/Year</h4>						
+								<ul class="hosting-list">
+										<li><span>Add on 1</span> Domain Name</li>
+										<li><span>1GB</span> Disk Space</li>										
+										<li><span>30</span> Sub Domain</li>									
+										<li><span>30</span> Email Accounts</li>
+										<li><span>30</span> FTP Accounts</li>
+										<li><span>30</span> Database(MySQL)</li>
+										<li><span>5GB</span> Monthly Bandwidth</li>
+										<li><span>24x7</span>Server Monitoring Support</li>	
+									</ul>
+								</ul>
+								<a href="#contact" class="btn btn-outline-primary">အသေးစိတ်ကြည့်ရှုရန်</a>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="hosting-box selected">
+								<img src="images/proffessional.svg" alt="starter">
+								<h6 class="font-weight-medium title-text">Gold Plan</h6>
+								<h4 class="text-amount mb-4 mt-2">MMK/Year</h4>
+								<ul class="hosting-list">
+									<li><span>Add on 10</span> Domain Name</li>
+										<li><span>5GB</span> Disk Space</li>										
+										<li><span>60</span> Sub Domain</li>																	
+										<li><span>60</span> Email Accounts</li>
+										<li><span>60</span> FTP Accounts</li>
+										<li><span>60</span> Database(MySQL)</li>
+										<li><span>10GB</span> Monthly Bandwidth</li>
+										<li><span>24x7</span>Server Monitoring Support</li>	
+								</ul>
+								<a href="#contact" class="btn btn-primary">အသေးစိတ်ကြည့်ရှုရန်</a>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="hosting-box">
+								<img src="images/premium.svg" alt="starter">
+								<h6 class="font-weight-medium title-text">Platinum Plan</h6>
+								<h4 class="text-amount mb-6 mt-2">MMK/Year</h4>
+								<ul class="hosting-list">
+									<li><span>Add on 50</span> Domain Name</li>
+									<li><span>10GB</span> Disk Space</li>										
+									<li><span>90</span> Sub Domain</li>									
+									<li><span>90</span> Email Accounts</li>
+									<li><span>90</span> FTP Accounts</li>
+									<li><span>90</span> Database(MySQL)</li>
+									<li><span>50GB</span> Monthly Bandwidth</li>
+									<li><span>24x7</span>Server Monitoring Support</li>	
+								</ul>
+								<a href="#contact" class="btn btn-outline-primary">အသေးစိတ်ကြည့်ရှုရန်</a>
+							</div>
+					
+						</div>
+					</div>
+				</div>
+				
+			</section><br><br><br>
+
+			<div class="container">
+				<div class="row">
+				<div class="mt-md-0 mt-lg-4">
+					
+				<h4>
+				Vital Tech Myanmar မှ ရောင်းချသည့် hosting ၏ အားသာချက်များ</h4>
+				<ul>
+				<li>Apache နှင့် PHP module များ၊ setting များကို မည်သည့် website နှင့်မဆိုအဆင်ပြည်စေရန် တည်ဆောက်ထားခြင်း</li>
+				<li>Hosting Control Panel (cPanel) မှာ အသုံးပြုရလွယ်ကူခြင်း</li>
+				<li>Backup နှင့် 99% Sever uptime အာမခံမှုရှိခြင်း</li>
+				<li>Sever များကို Intel Xeon processor များဖြင့် တပ်ဆင်အသုံးပြုထားခြင်း</li>
+				<li>၂၄နာရီ၊ ၇ ရက်ပတ်လုံး Server Monitoring လုပ်ပေးခြင်း</li>
+				<li>အခမဲ့ Technical Support ပေးခြင်း</li>				
+				</ul>							
+				</div>
+				</div>
+				<p class="font-weight-medium" >Cpanel Demo Verison အားကြည့်ရှုရန် ...<a href="https://demo.cpanel.net:2083/login/?user=democom&pass=DemoCoA5620&locale=en" target="_blank" title="click here to access cPanel Demo">&nbsp;&nbsp;<img src="images/cpanel.jpeg" width="80" height="60" border="0" alt="click here to access cPanel Demo"></a></p>
+			<section class="contactus" id="contact">
+				<div class="container">
+					<div class="row mb-5 pb-5">
+						<div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
+							<img src="images/contact.jpg" alt="contact" class="img-fluid">
+						</div>
+						<div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
+							<h3 class="font-weight-medium text-dark mt-5 mt-lg-0">Contact Us!</h3>
+							<h5 class="text-dark mb-5">Fill Out The Form Below To Get In Touch With Us</h5>
+							<form id="contact" action="" method="POST">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input type="text" class="form-control" name="name" id="name" placeholder="First Name*">
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input type="text" class="form-control" name="surname" id="surname" placeholder="Last Name*">
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input type="email" class="form-control" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="You Email*">
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input type="text" name="subject" class="form-control" id="subject" placeholder="Subject*">
+										</div>
+									</div>
+
+									<div class="col-sm-12">
+										<div class="form-group">
+											<textarea name="message" id="message" class="form-control" placeholder="Message*" rows="5"></textarea>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<button type="submit" id="form-submit" name="submit" class="btn btn-secondary">Send Message Now</button>
+										
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+
+		<div class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<address>
+								<p>Office Address</p>
+								<p class="mb-4">Yangon</p>
+								<div class="d-flex align-items-center">
+									<p class="mr-4 mb-0">+959  763236268 </p>
+									<a href="mailto:info@vitaltechmm.info" class="footer-link">info@vitaltechmm.info</a>
+								</div>
+								<div class="d-flex align-items-center">
+									<p class="mr-4 mb-0">+959 964444882</p>
+									<a href="mailto:sales@vitaltechmm.info" class="footer-link">sales@vitaltechmm.info</a>
+								</div>
+								
+							</address>
+							<div class="social-icons">
+								<h6 class="footer-title font-weight-bold">
+									Social Share
+								</h6>
+								<div class="d-flex">
+									
+									<a href="https://www.facebook.com/vitaltechmm/" target="_blank"><i class="mdi mdi-facebook-box"></i></a>
+									<a href="https://www.linkedin.com/company/vital-tech-myanmar-co-ltd/" target="_blank"><i class="mdi mdi-linkedin-box"></i></a>
+									<a href="https://www.instagram.com/vital_tech_myanmar/" target="_blank"><i class="mdi mdi-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="row">
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="d-flex align-items-center">
+							
+							<p class="mb-0 text-small pt-1">Copyright © <script>document.write(new Date().getFullYear())</script>  <a href="https://facebook.com/vitaltechmm" class="text-white" target="_blank">VitalTechMyanmar</a>. All rights reserved.</p>
+						</div>
+						<div>
+							<div class="d-flex">
+								<a href="#" class="text-small text-white mx-2 footer-link">Privacy Policy </a>          
+								<a href="#" class="text-small text-white mx-2 footer-link">Customer Support </a>
+								<a href="#" class="text-small text-white mx-2 footer-link">Careers </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</footer>
+		<script src="vendors/base/vendor.bundle.base.js"></script>
+		<script src="vendors/owl.carousel/js/owl.carousel.js"></script>
+		<script src="vendors/aos/js/aos.js"></script>
+		<script src="vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+		<script src="js/template.js"></script>
+		<script src="//code.tidio.co/sqqx9sh5o737au5oeuv6l9e6rsgmt4gq.js" async></script>
+	
+		
+
+	</body>
+</html>
